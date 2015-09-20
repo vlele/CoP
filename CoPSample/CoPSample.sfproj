@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Service Fabric Tools\Microsoft.VisualStudio.Azure.Fabric.ApplicationProject.props" />
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>a2317c41-49dc-4369-a5db-73a41b112077</ProjectGuid>
+    <ProjectVersion>0.8</ProjectVersion>
+  </PropertyGroup>
+  <ItemGroup>
+    <None Include="ApplicationManifest.xml" />
+    <None Include="PublishProfiles\Cloud.xml" />
+    <None Include="PublishProfiles\Local.xml" />
+    <None Include="Scripts\Create-FabricApplication.ps1" />
+    <None Include="Scripts\Deploy-FabricApplication.ps1" />
+    <None Include="Scripts\Get-FabricApplicationStatus.ps1" />
+    <None Include="Scripts\Utilities.psm1" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\AuthorActorService\AuthorActorService.csproj" />
+    <ProjectReference Include="..\AuthorService\AuthorService.csproj" />
+    <ProjectReference Include="..\CoP.WebAPI\CoP.WebAPI.csproj" />
+    <ProjectReference Include="..\CourseService\CourseService.csproj" />
+    <ProjectReference Include="..\EmailActorService\EmailActorService.csproj" />
+    <ProjectReference Include="..\MediaService\MediaService.csproj" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Service Fabric Tools\Microsoft.VisualStudio.Azure.Fabric.ApplicationProject.targets" />
+</Project>

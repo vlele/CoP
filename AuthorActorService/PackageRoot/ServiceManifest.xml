@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ServiceManifest xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" Name="AuthorActorServicePkg" Version="1.0.0.0" xmlns="http://schemas.microsoft.com/2011/01/fabric">
+   <ServiceTypes>
+      <StatefulServiceType ServiceTypeName="AuthorActorServiceActorServiceType" HasPersistedState="true">
+         <Extensions>
+            <Extension Name="__GeneratedServiceType__">
+               <GeneratedNames xmlns="http://schemas.microsoft.com/2015/03/fabact-no-schema">
+                  <DefaultService Name="AuthorActorServiceActorService" />
+                  <ServiceEndpoint Name="AuthorActorServiceActorServiceEndpoint" />
+                  <ReplicatorEndpoint Name="AuthorActorServiceActorServiceReplicatorEndpoint" />
+                  <ReplicatorConfigSection Name="AuthorActorServiceActorServiceReplicatorConfig" />
+                  <ReplicatorSecurityConfigSection Name="AuthorActorServiceActorServiceReplicatorSecurityConfig" />
+                  <StoreConfigSection Name="AuthorActorServiceActorServiceLocalStoreConfig" />
+               </GeneratedNames>
+            </Extension>
+         </Extensions>
+      </StatefulServiceType>
+   </ServiceTypes>
+   <CodePackage Name="Code" Version="1.0.0.0">
+      <EntryPoint>
+         <ExeHost>
+            <Program>AuthorActorService.exe</Program>
+         </ExeHost>
+      </EntryPoint>
+   </CodePackage>
+   <ConfigPackage Name="Config" Version="1.0.0.0" />
+   <Resources>
+      <Endpoints>
+         <Endpoint Name="AuthorActorServiceActorServiceEndpoint" />
+         <Endpoint Name="AuthorActorServiceActorServiceReplicatorEndpoint" />
+      </Endpoints>
+   </Resources>
+</ServiceManifest>
